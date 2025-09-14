@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult with your Specialist</title>
+    <link rel="stylesheet" href="css/specialities.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="images/th.jpeg" alt="" class="navimg">
+        <p><a href="/" class="navtab">Home</a></p>
+        <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+        <div class="navlinks">
+            <a href="" class="navtab">Find a Doctor</a>
+            <a href="/healthTips" class="navtab">Health-Advice</a>
+            <a href="/about" class="navtab">About Us</a>
+            <% if (userName) { %>
+                <a href="#" class="navtab">Welcome, <%= userName %></a>
+                <!-- Logout button when the user is logged in -->
+                <form action="/logout" method="POST" style="display:inline;">
+                    <button type="submit" class="navtab">Logout</button>
+                </form>
+            <% } else { %>
+                <a href="loginpage" class="navtab">Login</a>
+            <% } %>
+        </div>
+        </div>
+    <div class="ourspecilaiest">
+     <h1>OUR SPECIALLIST </h1>
+    </div>
+    <div class=" card-container" >
+      
+        <div class="card">
+            <a href="/GenralPhysician" class="card-link">
+                <img src="./images/Gen-phys.jpg" alt="Primary Care">
+            </a>
+            <h3>Genral physician</h3>
+        </div>
+        <div class="card">
+            <a href="/Cardiologist" class="card-link">
+                <img src="./images/human-heart-design.jpg" alt="Primary Care">
+            </a>
+            <h3>Cardiologist</h3>
+        </div>
+        <div class="card">
+            <a href="/Gynocologist" class="card-link">
+                <img src="./images/Gyno.jpg" alt="Primary Care">
+            </a>
+            <h3>Gynocologist</h3>
+        </div>
+        <div class="card">
+            <a href="/psychiatrist" class="card-link">
+                <img src="./images/physco.webp" alt="Primary Care">
+            </a>
+            <h3>psychiatrist</h3>
+        </div>
+        <div class="card">
+            <a href="/Dermatologist" class="card-link">
+                <img src="./images/dermo.jpg" alt="Primary Care">
+            </a>
+            <h3>Dermatologist</h3>
+        </div>
+        <div class="card">
+            <a href="/Gastoenterologist" class="card-link">
+                <img src="./images/Gastro.jpg" alt="Primary Care">
+            </a>
+            <h3>Gastoenterologist</h3>
+        </div>
+        <div class="card">
+            <a href="/Neurologists" class="card-link">
+                <img src="./images/nerves.jpg" alt="Primary Care">
+            </a>
+            <h3>Neurologists</h3>
+        </div>
+        <div class="card">
+            <a href="/Sexologist" class="card-link">
+                <img src="./images/sexologist.jpg" alt="Primary Care">
+            </a>
+            <h3>Sexologist</h3>
+        </div>
+        <div class="card">
+            <a href="/Pediatricians" class="card-link">
+                <img src="./images/pediat.jpg" alt="Primary Care">
+            </a>
+            <h3>Pediatricians</h3>
+        </div>
+        <div class="card">
+            <a href="/Surgeon" class="card-link">
+                <img src="./images/Surgeon.jpg" alt="Primary Care">
+            </a>
+            <h3>Surgeon</h3>
+        </div>
+        <div class="card">
+            <a href="/Orthopaedic" class="card-link">
+                <img src="./images/Orthopaedic.webp" alt="Primary Care">
+            </a>
+            <h3>Orthopaedic</h3>
+        </div>
+        <div class="card">
+            <a href="/Dentist" class="card-link">
+                <img src="./images/dentist.jpg" alt="Primary Care">
+            </a>
+            <h3>Dentist</h3>
+        </div>
+  
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                © 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

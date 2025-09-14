@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Advice | Health Hub</title>
+    <link rel="stylesheet" href="css/yogaadvice.css">    
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+     <div class="header">Yoga Advice</div> 
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Select Gender & Age Group</h2>
+        <p>Receive personalized yoga advice based on your selection.</p>
+
+        <!-- Gender Selection -->
+        <div class="gender-container">
+            <div class="gender-card" onclick="selectGender('male')" id="male-card">Male</div>
+            <div class="gender-card" onclick="selectGender('female')" id="female-card">Female</div>
+            
+        </div>
+
+        <!-- Age Selection -->
+        <label for="age">Age Group:</label>
+        <select id="age">
+            <option value="child">Teen (5-21)</option>
+            <option value="teen">Adult (21-50)</option>
+            <option value="adult">Senior(50+)</option>
+            
+        </select>
+
+        <button  class="getbtn" onclick="getAdvice()">Get Advice</button>
+
+        <!-- Advice Display -->
+        <div id="advice"></div>
+
+        <!-- Yoga Poses -->
+        <div class="yoga-poses" id="yoga-poses"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let selectedGender = ""; 
+
+        function selectGender(gender) {
+            selectedGender = gender;
+            document.querySelectorAll(".gender-card").forEach(card => card.classList.remove("active"));
+            document.getElementById(`${gender}-card`).classList.add("active");
+        }
+
+        function getAdvice() {
+            if (!selectedGender) {
+                alert("Please select a gender.");
+                return;
+            }
+
+            const age = document.getElementById("age").value;
+            let advice = "";
+            let yogaPoses = [];
+
+            const yogaData = {
+                child: [
+                    { name: "Tree Pose", img: "images/tree.webp", desc: "Improves balance and focus." },
+                    { name: "Butterfly Pose", img: "images/bigbutter.jpg", desc: "Enhances flexibiThe butterfly pose, also known as Baddha Konasana, is a seated yoga posture that opens the hips and inner thighs, promoting flexibility and relaxation. lity in hips." },
+                    { name: "Cat-Cow Pose", img: "images/CatCow_Horizontal.jpg.webp", desc: "Improves spinal flexibility." },
+                    { name: "Happy Baby Pose", img: "images/happy-baby.jpg.avif", desc: "Relaxes the lower back and hips." },
+                    { name: "Cobra Pose", img: "images/cobra-pose_11zon.jpg", desc: "Strengthens back muscles." }
+                ],
+                teen: [
+                    { name: "Sun Salutation", img: "images/Sun-Salutation-Poses-101_-Each-Pose-Illustrated-Explained.webp", desc: "A great full-body warm-up." },
+                    { name: "Warrior Pose", img: "images/Warrior.jpg", desc: "Builds endurance and strength." },
+                    { name: "Triangle Pose", img: "images/tringle.jpg", desc: "Stretches legs and spine." },
+                    { name: "Bridge Pose", img: "images/Straight+Arm+Bridge.jpg", desc: "Strengthens the back and legs." },
+                    { name: "Plank Pose", img: "images/Forearm-Plank_Andrew-Clark.jpg.avif", desc: "Improves core strength." }
+                ],
+                adult: [
+                    { name: "Downward Dog", img: "images/downDog_9650.jpg", desc: "Strengthens arms and legs." },
+                    { name: "Cobra Pose", img: "images/cobra-pose_11zon.jpg", desc: "Opens up the chest and lungs." },
+                    { name: "Child's Pose", img: "images/child.jpg", desc: "Great for relaxation." },
+                    { name: "Boat Pose", img: "images/images.jpeg", desc: "Improves core strength." },
+                    { name: "Seated Forward Bend", img: "images/Paschimottanasana-Seated-Forward-bend-Ekhart-Yoga.webp", desc: "Stretches the back and hamstrings." }
+                ]
+            };
+
+            advice = `Great choice! Here are 5 recommended yoga poses for a ${age.replace("-", " ")}.`;
+            yogaPoses = yogaData[age];
+
+            document.getElementById("advice").innerHTML = `<p><strong>Advice:</strong> ${advice}</p>`;
+            document.getElementById("yoga-poses").innerHTML = yogaPoses.map(pose => `
+                <div class="pose-card">
+                    <img src="${pose.img}" alt="${pose.name}">
+                    <h3>${pose.name}</h3>
+                    <p>${pose.desc}</p>
+                </div>
+            `).join('');
+        }
+    </script>
+
+
+<div class="footer">
+    <div class="box1">
+        <img src="images/th.jpeg" alt="" class="ftimg1">
+        <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+    </div>
+    <div class="box2">
+        <h3>STAY IN TOUCH</h3>
+        <br><br>
+        <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+        <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+        <img src="images/youtube.png" alt=""  class="ftimg">
+        <img src="images/twitter.png" alt=""  class="ftimg">
+        <br> <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+    </div>
+    <div class="box3">
+        <p>Contact Us|
+            Privacy Policy|
+            Terms & Conditions|
+            Gifting Policy|
+            Online payment & refund policy|
+            Tele-consult|
+            Contact
+            <br>
+            © 2022 Fortis Healthcare. All Rights Reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>

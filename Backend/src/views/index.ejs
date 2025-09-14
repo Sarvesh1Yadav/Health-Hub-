@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthHub.com</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .fade {
+            animation: fadeEffect 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="images/th.jpeg" alt="" class="navimg">
+        <p><a href="/" class="navtab">Home</a></p>
+        <button class="appoint"><a href="/appointment">Book an Appointment</a></button>
+        <div class="navlinks">
+            <a href="/specialities" class="navtab">Find a Doctor</a>
+            <a href="/healthTips" class="navtab">Health-Advice</a>
+            <a href="/about" class="navtab">About Us</a>
+    
+            <% if (userName) { %>
+                <a href="/chatbot" class="navtab">Chatbot</a> <!-- Added Chatbot link -->
+                <a href="#" class="navtab">Welcome, <%= userName %></a>
+    
+                <!-- Logout button when the user is logged in -->
+                <form action="/logout" method="POST" style="display:inline;">
+                    <button type="submit" class="navtab">Logout</button>
+                </form>
+            <% } else { %>
+                <a href="/loginpage" class="navtab">Login</a>
+            <% } %>
+        </div>
+    </div>
+    <div class="centre">
+        <div class="wrapper">
+            <div class="slideshow-container">
+                <img class="slides fade" src="images/New-Web-Banner-03.jpg" alt="Slide 1">
+                <img class="slides fade" src="images/IIM.jpeg" alt="Slide 2">
+                <img class="slides fade" src="images/IIM2.jpeg" alt="Slide 3">
+                <img class="slides fade" src="images/image.png" alt="Slide 4">
+                <img class="slides fade" src="images/dc1.jpg" alt="Slide 5">
+                <img class="slides fade" src="images/dc2.png" alt="Slide 6">
+            </div>
+            <h2>If you don’t make time for exercise, you’ll probably have to make time for illness.</h2>
+        </div>
+    </div>
+        <div class="article">
+            <div class="quote">
+                <h1>Read top articles from health experts</h1>
+                <br><br>
+                <p>Health articles that keep you informed about good health practices and achieve your goals.</p>
+                <br><br>
+                <button class="read"><a href="/articles"> See all articles</a></button>
+            </div>
+
+            <div class="quoteimg">
+                <div class="coronaimg">
+                    <a href="/coronaVirusMyths" class="quotelink">
+                    <img src="images/articleimg.jpeg" alt="" class="covid">
+                   12 Corona Virus Myths & Facts That You Should Be Aware Of</a>
+                </div>
+                <div class="vitaminimg">   <a href="/diet" class="quotelink">
+                    <img src="images/articleimg2.jpeg" alt="" class="multi">
+                 Eating Right To Build Immunity Against Cold And Viral Infection</a>
+                </div>
+            </div>
+        </div>
+
+        <span class="serviceheading">
+            <h1>Our Services</h1>
+        </span>
+
+        <div class="service">
+            <div class="card">
+                <a href="/appointment" class="cardtext">
+                <img src="images/apnt.webp" alt="" class="cardimg">
+                Book Your Appointment</a>
+            </div>
+            <div class="card">
+                <a href="/yogaaadvice" class="cardtext">
+                <img src="images/yog.webp" alt="" class="cardimg">
+               Yoga Advice</a>
+            </div>
+            <div class="card">
+                <a href="/diet" class="cardtext">
+                <img src="images/di.jpg" alt="" class="cardimg">
+                Diet Plan</a>
+            </div>
+            <div class="card">
+                <a href="/articles" class="cardtext">
+                <img src="images/book.jpg" alt="" class="cardimg">
+               Editorial By Doctors</a>
+            </div>
+            <div class="card">
+                <a href="/specialities" class="cardtext">
+                <img src="images/bt.png" alt="" class="cardimg">
+               Find Best Doctor</a>
+            </div>
+            <div class="card">
+                <a href="/healthTips" class="cardtext">
+                <img src="images/healthtips.jpg" alt="" class="cardimg">
+              Health Tips</a>
+            </div>
+        </div>
+
+        <div class="doctor">
+            <div class="drpic">
+                <img src="images/JoyceMeyer-2023-1x1-1.jpg.crdownload" alt="" class="drpicid">
+            </div>
+            <div class="drtext">
+                <img src="images/medical-quotes-mar2-06.webp" alt="" class="drtextid">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I, Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+           <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+           <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt="" class="ftimg">
+            <img src="images/twitter.png" alt="" class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us | Privacy Policy | Terms & Conditions | Gifting Policy | Online payment & refund policy | Tele-consult | Contact
+                <br>© 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare vs. Medicaid: Understanding the Differences</title>
+    <link rel="stylesheet" href="css/allarticle.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1><marquee direction="Lifestyle">Medicare vs. Medicaid: Understanding the Differences</marquee></h1>
+        <div class="content">
+            <div class="section">
+                <h3>What is Medicare?</h3>
+                <p>Medicare is a federal health insurance program primarily for people aged 65 and older, as well as certain younger individuals with disabilities or specific medical conditions. It is divided into different parts that cover hospital care, medical services, and prescription drugs.</p>
+
+            </div>
+            <div class="section">
+                <h3>What is Medicaid? </h3>
+                <p>Medicaid is a joint federal and state program that provides health coverage to low-income individuals and families. Each state administers its own Medicaid program, leading to variations in eligibility and benefits. Medicaid covers a broad range of medical services, including hospital visits, doctor’s appointments, and long-term care.</p>
+        
+               
+            </div>
+            <div class="section">
+                <h3>Key Differences Between Medicare and Medicaid</h3>
+                <p>While both programs help cover healthcare costs, they serve different populations and have distinct eligibility requirements:</p>
+                <ul>
+                    <li><strong>Eligibility:</strong> Medicare is primarily for seniors and certain disabled individuals, while Medicaid is based on income level.</li>
+                    <li><strong>Coverage:</strong> Medicare has multiple parts (A, B, C, and D) with different coverage options, whereas Medicaid covers a wide range of services, often at little to no cost.</li>
+                    <li><strong>Costs:</strong> Medicare beneficiaries typically pay premiums, deductibles, and co-pays, while Medicaid often has minimal costs for recipients.</li>
+                    <li><strong>Administration:</strong> Medicare is managed by the federal government, whereas Medicaid is run by individual states with federal oversight.</li>
+                </ul>                
+            </div>
+            <div class="section">
+                <h3>Can Someone Have Both Medicare and Medicaid?</h3>
+                <p>Yes, some individuals qualify for both programs, known as "dual eligibility." These beneficiaries receive additional benefits, such as help with Medicare premiums and co-pays, as well as expanded Medicaid services.</p>
+
+                
+           
+            </div>
+            <div class="section">
+                <h3>Conclusion</h3>
+                <p>Medicare and Medicaid serve different purposes but are both crucial in providing healthcare coverage to millions of Americans. Understanding the differences can help individuals determine which program best suits their needs and how they can access healthcare benefits.</p>
+
+                
+            </div>
+           
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                ©️ 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

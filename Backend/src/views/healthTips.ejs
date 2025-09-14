@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health-Tips</title>
+    <link rel="stylesheet" href="css/healthTips.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="images/th.jpeg" alt="" class="navimg">
+        <p><a href="/" class="navtab">Home</a></p>
+        <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+        <div class="navlinks">
+            <a href="/specialities" class="navtab">Find a Doctor</a>
+            <a href="/healthTips" class="navtab">Health-Advice</a>
+            <a href="/about" class="navtab">About Us</a>
+            <% if (userName) { %>
+                <a href="#" class="navtab">Welcome, <%= userName %></a>
+                <!-- Logout button when the user is logged in -->
+                <form action="/logout" method="POST" style="display:inline;">
+                    <button type="submit" class="navtab">Logout</button>
+                </form>
+            <% } else { %>
+                <a href="loginpage" class="navtab">Login</a>
+            <% } %>
+        </div>
+    </div>
+    <div class="container">
+        <h1><marquee direction="Lifestyle">Health-Tips</marquee></h1>
+        <div class="content section">
+            <h2>1.  Nutrition & Diet</h2>
+            <div class="col1 sec1">
+                <ul>
+                    <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
+                    <li>Stay hydrated by drinking at least 2-3 liters of water daily.</li>
+                    <li>Limit processed foods, sugary drinks, and excessive salt intake.</li>
+                    <li>Include healthy fats like nuts, seeds, and olive oil in your meals.</li>
+                </ul>
+            </div>
+            <div class="col2">
+                <img src="images/nutrition.jpg">
+            </div>
+            </div>
+            <div class="section">
+                <h2>2. Physical Activity</h2>
+                <div class="col1 sec2">
+                <ul>
+                    <li>Aim for at least 30 minutes of moderate exercise (walking, jogging, cycling) most days of the week.</li>
+                    <li>Strength training twice a week helps maintain muscle mass.</li>
+                    <li>Take short breaks to stretch if you have a desk job.</li>
+                </ul>
+                </div>
+                <div class="col2">
+                    <img src="images/physical_activity.jpg">
+                </div>
+            </div>
+            <div class="section">
+                <h2>3. Mental Well-being</h2>
+                <div class="col1 sec3">
+                <ul>
+                    <li>Get 7-9 hours of quality sleep every night.</li>
+                    <li>Practice stress-relief techniques like meditation, deep breathing, or yoga.</li>
+                    <li>Stay socially connected with friends and family.</li>
+                    <li>Take breaks from screens and digital devices.</li>
+                </ul>
+                </div>
+                <div class="col2 img3">
+                    <img src="images/mental.jpg">
+                </div>
+            </div>
+            <div class="section">
+                <h2>4. Preventive Care</h2>
+                <div class="col1 sec4">
+                <ul>
+                    <li>Go for regular health check-ups and screenings.</li>
+                    <li>Maintain proper hygiene, including regular hand washing.</li>
+                    <li>Get vaccinated and stay updated on immunizations.</li>
+                </ul>
+                </div>
+                <div class="col2 img4">
+                    <img src="images/preventive.avif">
+                </div>
+            </div>
+            <div class="section">
+                <h2>5. Lifestyle Habits</h2>
+                <div class="col1 sec5">
+                <ul>
+                    <li>Avoid smoking, excessive alcohol, and drug use.</li>
+                    <li>Maintain a healthy weight through proper diet and exercise.</li>
+                    <li>Practice safe sun exposure by using sunscreen.</li>
+                </ul>
+            </div>
+                
+                <div class="col2 img5">
+                    <img src="images/health_habbits.jpg">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                © 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <title>ChatBot</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Chatbot</div>
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">Hello! I can provide descriptions of medicines. Ask me about any medicine!</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type a medicine name...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const medicineDescriptions = {
+            "paracetamol": "Paracetamol is a pain reliever and fever reducer, commonly used for headaches and flu symptoms.",
+            "ibuprofen": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, fever, and inflammation.",
+            "aspirin": "Aspirin is used to relieve pain, reduce fever, and lower the risk of heart attacks.",
+            "amoxicillin": "Amoxicillin is an antibiotic used to treat bacterial infections such as pneumonia, bronchitis, and urinary tract infections.",
+            "cetirizine": "Cetirizine is an antihistamine used to relieve allergy symptoms like runny nose, sneezing, and itchy eyes.",
+            "omeprazole": "Omeprazole is a proton pump inhibitor (PPI) that reduces stomach acid and treats conditions like acid reflux and ulcers.",
+            "metformin": "Metformin is an oral diabetes medication used to control blood sugar levels in people with type 2 diabetes.",
+            "atorvastatin": "Atorvastatin is a statin medication that helps lower cholesterol and reduce the risk of heart disease.",
+            "azithromycin": "Azithromycin is an antibiotic used to treat bacterial infections such as respiratory and skin infections.",
+            "loratadine": "Loratadine is an antihistamine used to treat allergies without causing drowsiness.",
+            "naproxen": "Naproxen is a nonsteroidal anti-inflammatory drug (NSAID) used for pain relief and inflammation reduction.",
+            "diclofenac": "Diclofenac is used to treat pain and inflammation from arthritis, migraines, and other conditions.",
+            "fexofenadine": "Fexofenadine is an antihistamine that relieves allergy symptoms like hay fever and hives.",
+            "ranitidine": "Ranitidine was used to reduce stomach acid but has been discontinued in many countries due to safety concerns.",
+            "pantoprazole": "Pantoprazole is a proton pump inhibitor (PPI) used to treat acid reflux and stomach ulcers.",
+            "clindamycin": "Clindamycin is an antibiotic used to treat serious bacterial infections.",
+            "doxycycline": "Doxycycline is a broad-spectrum antibiotic used to treat infections and acne.",
+            "hydroxyzine": "Hydroxyzine is an antihistamine that reduces anxiety and allergy symptoms.",
+            "prednisone": "Prednisone is a corticosteroid used to reduce inflammation in conditions like asthma and arthritis.",
+            "montelukast": "Montelukast is used to prevent and control asthma and allergy symptoms.",
+            "fluconazole": "Fluconazole is an antifungal medication used to treat yeast infections.",
+            "warfarin": "Warfarin is a blood thinner used to prevent blood clots.",
+            "enalapril": "Enalapril is an ACE inhibitor used to treat high blood pressure and heart failure.",
+            "losartan": "Losartan is used to lower high blood pressure and protect kidney function in diabetics.",
+            "amlodipine": "Amlodipine is a calcium channel blocker used to treat high blood pressure and angina.",
+            "metoprolol": "Metoprolol is a beta-blocker used to treat high blood pressure and heart disease.",
+            "sertraline": "Sertraline is an antidepressant used to treat depression, anxiety, and OCD.",
+            "escitalopram": "Escitalopram is an SSRI antidepressant used for depression and anxiety.",
+            "tramadol": "Tramadol is a pain reliever used to treat moderate to severe pain.",
+            "morphine": "Morphine is a strong opioid painkiller used for severe pain relief.",
+            "codeine": "Codeine is an opioid used for mild to moderate pain and cough suppression.",
+            "salbutamol": "Salbutamol (Albuterol) is a bronchodilator used to treat asthma and COPD.",
+            "levothyroxine": "Levothyroxine is a thyroid hormone replacement used to treat hypothyroidism.",
+            "insulin": "Insulin is used to control blood sugar levels in diabetes.",
+            "clopidogrel": "Clopidogrel is a blood thinner that helps prevent heart attacks and strokes.",
+            "tamsulosin": "Tamsulosin is used to treat enlarged prostate symptoms.",
+            "finasteride": "Finasteride is used to treat hair loss and enlarged prostate.",
+            "sildenafil": "Sildenafil (Viagra) is used to treat erectile dysfunction.",
+            "diazepam": "Diazepam is a benzodiazepine used for anxiety, muscle spasms, and seizures.",
+            "dolo": "Dolo (Dolo-650) is a paracetamol-based pain reliever used to reduce fever and mild to moderate pain.",
+            "eno": "Eno is an antacid that provides quick relief from acidity, bloating, and indigestion."
+        };
+
+        function sendMessage() {
+            const input = document.getElementById("userInput");
+            const message = input.value.trim().toLowerCase();
+            if (message === "") return;
+            
+            const chatBox = document.getElementById("chatBox");
+            
+            // Display user message
+            const userMessage = document.createElement("div");
+            userMessage.className = "message user-message";
+            userMessage.textContent = input.value;
+            chatBox.appendChild(userMessage);
+            
+            // Bot response
+            setTimeout(() => {
+                const botMessage = document.createElement("div");
+                botMessage.className = "message bot-message";
+                
+                if (medicineDescriptions[message]) {
+                    botMessage.textContent = medicineDescriptions[message];
+                } else {
+                    botMessage.textContent = "I'm sorry, I don't have information on that medicine. Please consult a doctor or pharmacist for more details.";
+                }
+                
+                chatBox.appendChild(botMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+            
+            input.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>    
+</body>
+</html>

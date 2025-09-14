@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult with your Specialist</title>
+    <link rel="stylesheet" href="css/GenralPhysician.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="ourspecilaiest">
+        <h1>psychiatrist</h1>
+        <div class="container">
+            <div class="card">
+                <img class="img" src="./images/doc7.webp" alt="Dr. Emily Carter">
+                <div class="status">● Available</div>
+                <div class="name">Dr. Ashwin Singh</div>
+                <div class="experience"><img src="images/cal.png" alt="Calendar Icon"> 6years</div>
+                <div class="fee"> Consultation Fee: $40</div>
+                <button class="book-btn"  ><a href="/appointment">Book a Appointment</a></button>
+               
+            </div>
+           
+                <div class="card">
+                    <img  class="img" src="./images/doc16.webp" alt="Dr. Emily Carter">
+                    <div class="status">● Available</div>
+                    <div class="name">Dr. Minakshi Kumari</div>
+                    <div class="experience"><img src="images/cal.png" alt="Calendar Icon"> 19 years</div>
+                    <div class="fee"> Consultation Fee: $70</div>
+                    <button class="book-btn"><a href="/appointment">Book a Appointment</a></button>
+                </div>
+           
+           
+                <div class="card">
+                    <img class="img" src="./images/doc15.webp" alt="Dr. Emily Carter">
+                    <div class="status">● Available</div>
+                    <div class="name">Dr. Ashok Mishra</div>
+                    <div class="experience"><img src="images/cal.png" alt="Calendar Icon"> 12 years</div>
+                    <div class="fee"> Consultation Fee: $50</div>
+                    <button class="book-btn"><a href="/appointment">Book a Appointment</a></button>
+                </div>
+            
+
+            
+                <div class="card">
+                    <img  class="img" src="./images/doc2.jpg" alt="Dr. Emily Carter">
+                    <div class="status">● Available</div>
+                    <div class="name">Ms. Neetu Agarwal</div>
+                    <div class="experience"><img src="images/cal.png" alt="Calendar Icon"> 23 years</div>
+                    <div class="fee"> Consultation Fee: $100</div>
+                    <button class="book-btn"><a href="/appointment">Book a Appointment</a></button>
+                </div>
+            </div>
+            
+        
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <img src="images/facebook.png" alt=""  class="ftimg">
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                © 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

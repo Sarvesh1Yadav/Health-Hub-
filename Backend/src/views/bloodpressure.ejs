@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incorrect Arm Position May Skew Blood Pressure Readings</title>
+    <link rel="stylesheet" href="css/allarticle.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1><marquee direction="Lifestyle">Incorrect Arm Position May Skew Blood Pressure Readings</marquee></h1>
+        <div class="content">
+            <div class="section">
+                <h3>Why Accurate Blood Pressure Readings Matter</h3>
+                <p>Blood pressure readings are a crucial indicator of heart health. Incorrect readings can lead to misdiagnosis, unnecessary medication, or a false sense of security regarding cardiovascular risks.</p>
+
+            </div>
+            <div class="section">
+                <h3>The Role of Arm Position </h3>
+                <p>Arm position plays a vital role in obtaining accurate blood pressure measurements. The American Heart Association (AHA) recommends keeping the arm at heart level to ensure correct readings.</p>
+        
+               
+            </div>
+            <div class="section">
+                <h3>Common Mistakes That Affect Readings</h3>
+                <ul>
+                    <li><strong>Arm Too High:</strong> Can result in artificially low readings.</li>
+                    <li><strong>Arm Too Low:</strong> May cause falsely high readings.</li>
+                    <li><strong>Unsupported Arm:</strong> Leads to muscle tension, which can skew results.</li>
+                    <li><strong>Crossed Legs:</strong> Can also raise blood pressure readings inaccurately.</li>
+                </ul>              
+            </div>
+            <div class="section">
+                <h3>Best Practices for Accurate Readings</h3>
+                <p>To ensure a reliable measurement:</p>
+                <ul>
+                    <li>Sit in a chair with feet flat on the floor.</li>
+                    <li>Rest the arm on a flat surface at heart level.</li>
+                    <li>Relax for at least five minutes before taking the measurement.</li>
+                    <li>Avoid caffeine, exercise, or smoking 30 minutes prior to measurement.</li>
+                </ul>
+                
+           
+            </div>
+            <div class="section">
+                <h3>Conclusion</h3>
+                <p>Proper technique is essential for obtaining an accurate blood pressure reading. Being mindful of arm position and following best practices can help ensure reliable results, leading to better healthcare decisions.</p>
+
+                
+            </div>
+           
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                ©️ 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

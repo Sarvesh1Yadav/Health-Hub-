@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthHub.com</title>
+    <link rel="stylesheet" href="css/diet.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="centre">
+        <div class="diet-section">
+            <marquee behavior="scroll" direction="left" scrollamount="6" style="font-size: 3.2rem; color: rgba(224, 54, 54, 0.762); font-weight: bold; margin-bottom: 30px;">
+                Diet Plans for Different Age Groups
+            </marquee>
+            
+        
+            <div style="margin: 30px auto; text-align: left;">
+                <img src="images/diet1.jpg" alt="">
+                <h3>Children (4-12 years)</h3>
+                <p>
+                    • Breakfast: Whole grain cereal with milk, fruits like banana or apple.<br>
+                    • Lunch: Rice/roti with vegetables, dal, and a small portion of curd.<br>
+                    • Snack: Handful of nuts or fruit yogurt.<br>
+                    • Dinner: Light meal with soup, chapati, and vegetables.
+                </p>
+        
+                <h3>Teens (13-19 years)</h3>
+                <p>
+                    • Breakfast: Eggs, toast, and a fruit smoothie.<br>
+                    • Lunch: Whole grain roti or brown rice with protein (paneer, chicken), salad.<br>
+                    • Snack: Sprouts or a peanut butter sandwich.<br>
+                    • Dinner: Lean protein with veggies and a light carb like quinoa or roti.
+                </p>
+        
+                <h3>Adults (20-59 years)</h3>
+                <p>
+                    • Breakfast: Oats, chia seeds, and fruit bowl.<br>
+                    • Lunch: Balanced meal with complex carbs, lean protein, and mixed vegetables.<br>
+                    • Snack: Green tea with roasted chana or fruits.<br>
+                    • Dinner: Light meal—grilled vegetables, lentils, and soup.
+                </p>
+           
+                <h3>Seniors (60+ years)</h3>
+                <p>
+                    • Breakfast: Dalia or soft idlis with milk or herbal tea.<br>
+                    • Lunch: Soft-cooked rice with dal, vegetables, and curd.<br>
+                    • Snack: Steamed fruits or soaked almonds.<br>
+                    • Dinner: Light soup, khichdi, or soft chapatis with veggies.
+                </p>
+                <img src="images/diet2.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                © 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Ask Effective Medical Questions</title>
+    <link rel="stylesheet" href="css/allarticle.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1><marquee direction="Lifestyle">How to Ask Effective Medical Questions</marquee></h1>
+        <div class="content">
+            <div class="section">
+                <h3>1. Be Specific</h3>
+                <p>
+                    When asking medical questions, avoid generalizations. Provide specific details about your symptoms, including their duration, intensity, and any triggers or patterns you've noticed. For example, instead of asking, "Why do I feel tired?" you could ask, "I've been feeling fatigued for the past two weeks, especially in the afternoons, even after getting eight hours of sleep. Could this be due to a vitamin deficiency or something else?"
+                </p>
+            </div>
+            <div class="section">
+                <h3>2. Use Simple and Clear Language</h3>
+                <p>            Complex medical terms may confuse both you and the person answering your question. Use straightforward language to describe your concerns effectively. If a doctor uses technical terms, don't hesitate to ask them to simplify their response. Clear communication ensures you fully understand your condition and possible treatments.
+
+                </p>
+               
+            </div>
+            <div class="section">
+                <h3>3. Mention Any Medications or Treatments</h3>
+                <p>Doctors need context to provide accurate advice. Always mention any ongoing treatments, medications, or supplements you are taking, as they can impact your condition. For example, if you are experiencing dizziness and taking medication for high blood pressure, that information is crucial in determining whether your medication is the cause.</p>
+
+                
+            </div>
+            <div class="section">
+                <h3>4. Ask About Possible Causes and Next Steps</h3>
+                <p>Instead of only inquiring about symptoms, ask what possible underlying causes might be and what steps you should take for further evaluation or treatment. For example, you can ask, "What are some common causes of persistent headaches, and what tests would help identify the issue?" This helps you take proactive steps toward finding a solution.</p>
+
+                
+            </div>
+            <div class="section">
+                <h3>5. Be Honest and Provide Complete Information</h3>
+                <p>Medical professionals rely on accurate information to diagnose and suggest treatments. Always be honest and thorough about your medical history, lifestyle, and any symptoms you're experiencing. Even details that seem unrelated—such as stress levels, diet, and sleep patterns—can be important in understanding the root cause of your health concerns.</p>
+
+               
+            </div>
+            <div class="section">
+                <h3>6. Prepare Questions in Advance</h3>
+                <p>Before a medical appointment or consultation, write down your concerns and prioritize them. This ensures you cover all important points without missing critical details. A well-prepared list of questions, such as "What are the potential side effects of this medication?" or "How can I improve my condition with lifestyle changes?" can lead to a more productive discussion with your doctor.</p>
+
+               
+            </div>
+            
+            <div class="section">
+                <h3>7. Ask for Clarification</h3>
+                <p>If you don’t understand a medical term or diagnosis, ask the healthcare professional to explain it in simpler terms. You have the right to fully understand your health situation. For example, if your doctor says you have "hypertension," ask them to explain what that means, its potential consequences, and how to manage it effectively.</p>
+
+               
+            </div>
+
+            <div class="section">
+                <h3>Conclusion</h3>
+                <p>Asking the right medical questions helps you receive better care and make informed decisions about your health. By being specific, clear, and prepared, you can enhance communication with healthcare professionals and improve your overall medical experience. Your health is important, and effective communication is a key part of receiving the best possible care.</p>
+
+                
+            </div>
+           
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                ©️ 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

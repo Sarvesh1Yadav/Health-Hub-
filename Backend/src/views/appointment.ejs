@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment For A Doctor</title>
+    <link rel="stylesheet" href="css/appointment.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img src="images/Doctor-Appointment-App.jpg" alt="" class="bgimg">
+        <h2>Doctor's Appointment Form</h2>
+        <div class="card">
+            <!-- Display success or error messages if any -->
+            <% if (typeof successMessage !== 'undefined') { %>
+                <div class="message success">
+                    <p><%= successMessage %></p>
+                </div>
+            <% } %>
+            <% if (typeof errorMessage !== 'undefined') { %>
+                <div class="message error">
+                    <p><%= errorMessage %></p>
+                </div>
+            <% } %>
+            
+            <form action="/appointment" method="POST">
+                <label for="name">Patient Name :</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="age">Age :</label>
+                <input type="text" id="age" name="age" required>
+            
+                <label for="number">Phone No. :</label>
+                <input type="tel" id="number" name="number" required>
+            
+                <label for="date">Select Date :</label>
+                <input type="date" id="date" name="date" required>
+            
+                <label for="email">Email ID :</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="time">Prefered Time :</label>
+                <input type="time" id="time" name="time" required>
+            
+                <label for="gender">Gender :</label>
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female" required> Female
+            
+                <label for="symptom">Symptoms :</label>
+                <input type="checkbox" name="symptoms" value="fever"> Fever
+                <input type="checkbox" name="symptoms" value="Headache"> Headache
+                <input type="checkbox" name="symptoms" value="cold"> Cold
+                <input type="checkbox" name="symptoms" value="other"> Others
+            
+                <label for="drname">Doctor's Name :</label>
+                <input type="text" id="drname" name="drname" required>
+            
+                <button class="appoint" onclick="bookAppointment()">Book an Appointment</button>
+                <p><a href="/">go to home page</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function bookAppointment() {
+            alert("Your appointment has been successfully booked!");
+        }
+    </script>
+</body>
+</html>

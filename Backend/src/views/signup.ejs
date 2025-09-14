@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="css/signup.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <form action="/signup" method="post">
+        <h1>Sign up</h1>
+        <p>We need a few details to create your account.</p>
+
+        <!-- Display error message if any -->
+        <% if (typeof errorMessage !== 'undefined') { %>
+          <div class="error-message"><%= errorMessage %></div>
+        <% } %>
+        
+        <div class="input-box">
+          <label for="fullName">Full Name</label>
+          <input type="text" name="fullName" id="fullName" placeholder="Your Sweet Name" required>
+        </div>
+        <div class="input-box">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+        </div>
+        <div class="input-box">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="1234-4567-890" required>
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="**********" required>
+        </div>
+        <div class="password-caption">
+          <label>
+            <p><b>Enter Strong Password.</b></p>
+          </label>
+        </div>
+        
+        <button type="submit" class="button">Create a New Account</button>
+        
+        <div class="loginPage">
+          <p>Already have an account? <a href="loginpage">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

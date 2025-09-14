@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Immunity with Nutrition</title>
+    <link rel="stylesheet" href="css/BuildImmunity.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1><marquee direction="Lifestyle">Eating Right to Build Immunity</marquee></h1>
+        <div class="content">
+            <h2>1. Essential Nutrients for Immunity</h2>
+            <div class="section">
+                <h3>A. Vitamin C – The Immune Booster</h3>
+                <p><strong>Why?</strong> Stimulates white blood cells, which help fight infections.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Citrus fruits (oranges, lemons, grapefruits)</li>
+                    <li>Bell peppers</li>
+                    <li>Strawberries</li>
+                    <li>Kiwi</li>
+                    <li>Broccoli</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>B. Vitamin D – The Sunshine Vitamin</h3>
+                <p><strong>Why?</strong> Plays a role in immune regulation and reduces respiratory infections.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Sunlight exposure</li>
+                    <li>Fatty fish (salmon, tuna, sardines)</li>
+                    <li>Egg yolks</li>
+                    <li>Fortified dairy products</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>C. Zinc – For Faster Recovery</h3>
+                <p><strong>Why?</strong> Helps immune cell function and promotes wound healing.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Nuts and seeds (pumpkin seeds, sunflower seeds)</li>
+                    <li>Legumes (chickpeas, lentils)</li>
+                    <li>Whole grains</li>
+                    <li>Meat and shellfish</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>D. Protein – Essential for Antibody Production</h3>
+                <p><strong>Why?</strong> Required for the production of antibodies and immune cells.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Lean meats (chicken, turkey, fish)</li>
+                    <li>Beans and lentils</li>
+                    <li>Dairy products</li>
+                    <li>Nuts and seeds</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>E. Probiotics – Gut Health for Immunity</h3>
+                <p><strong>Why?</strong> 70% of the immune system is in the gut; probiotics help maintain healthy gut bacteria.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Yogurt with live cultures</li>
+                    <li>Kefir</li>
+                    <li>Fermented foods (kimchi, sauerkraut, miso)</li>
+                    <li>Kombucha</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>F. Antioxidants – Reduce Inflammation</h3>
+                <p><strong>Why?</strong> Protect cells from damage and enhance immune function.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Green leafy vegetables (spinach, kale)</li>
+                    <li>Berries (blueberries, blackberries)</li>
+                    <li>Dark chocolate</li>
+                    <li>Nuts (almonds, walnuts)</li>
+                </ul>
+            </div>
+            
+            <h2>2. Foods to Avoid</h2>
+            <div class="section avoid">
+                <p>🚫 <strong>Processed foods</strong> – High sugar content suppresses white blood cells.</p>
+                <p>🚫 <strong>Sugary drinks</strong> – Increases inflammation and reduces immunity.</p>
+                <p>🚫 <strong>Alcohol & smoking</strong> – Weakens immune response.</p>
+                <p>🚫 <strong>Excess caffeine</strong> – Can dehydrate and stress the body.</p>
+            </div>
+            
+            <h2>3. Lifestyle Tips to Support Immunity</h2>
+            <div class="section tips">
+                <p>✅ <strong>Stay Hydrated</strong> – Drink 2-3 liters of water daily.</p>
+                <p>✅ <strong>Exercise Regularly</strong> – At least 30 minutes of moderate exercise.</p>
+                <p>✅ <strong>Get Enough Sleep</strong> – Aim for 7-9 hours per night.</p>
+                <p>✅ <strong>Manage Stress</strong> – Practice meditation, deep breathing, or yoga.</p>
+                <p>✅ <strong>Maintain Hygiene</strong> – Wash hands frequently and avoid touching your face.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box1">
+            <img src="images/th.jpeg" alt="" class="ftimg1">
+            <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+        </div>
+        <div class="box2">
+            <h3>STAY IN TOUCH</h3>
+            <br><br>
+            <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+            <img src="images/youtube.png" alt=""  class="ftimg">
+            <img src="images/twitter.png" alt=""  class="ftimg">
+            <br> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+        </div>
+        <div class="box3">
+            <p>Contact Us|
+                Privacy Policy|
+                Terms & Conditions|
+                Gifting Policy|
+                Online payment & refund policy|
+                Tele-consult|
+                Contact
+                <br>
+                © 2022 Fortis Healthcare. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

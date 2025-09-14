@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <title>AboutUs</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="images/th.jpeg" alt="" class="navimg">
+            <p><a href="/" class="navtab">Home</a></p>
+            <button class="appoint"><a href="/appointment">Book a Appointment</a></button>
+            <div class="navlinks">
+                <a href="/specialities" class="navtab">Find a Doctor</a>
+                <a href="/healthTips" class="navtab">Health-Advice</a>
+                <a href="/about" class="navtab">About Us</a>
+                <% if (userName) { %>
+                    <a href="#" class="navtab">Welcome, <%= userName %></a>
+                    <!-- Logout button when the user is logged in -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="navtab">Logout</button>
+                    </form>
+                <% } else { %>
+                    <a href="loginpage" class="navtab">Login</a>
+                <% } %>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="webdetails">Welcome to HealthHub – your trusted partner in wellness and healthcare!
+            At HealthHub, we make it easier than ever to book doctor appointments and access reliable health guidance—all in one place. Whether you're looking to consult with a medical professional, explore expert-backed yoga routines, or get medicine-related advice, we've got you covered. Our mission is to simplify your healthcare journey by connecting you with quality care and valuable wellness resources. Take the first step toward a healthier life with HealthHub today!</div>
+       
+        <div class="ourfocus">
+            <h2>Our Focus</h2>
+            <ul class="foc">
+                At HealthHub, our primary goal is to empower individuals to take charge of their health by providing:
+                <li>Expert Health Insights: Access trustworthy health advice, editorials written by certified doctors, and wellness guidance tailored to your needs.</li>
+                <li>Accessible Wellness: Bringing reliable, easy-to-understand health resources—including yoga, medicine, and lifestyle tips—to everyone, everywhere.</li>
+                <li>Personalized Care: Offering customized diet plans, curated wellness content, and appointment booking to help you stay on top of your health.</li>
+                <li>Guided Wellness Journey: Empowering you with expert-backed tools, consistent support, and practical strategies for a healthier life.</li>
+                
+            </ul>
+            <h2>Key Features</h2>
+            <ul class="foc"><h4>Doctor Editorials</h4>
+                <li>Expert-written articles and insights from certified doctors on a wide range of health and wellness topics.</li>
+                
+                <h4>Health & Wellness Guides</h4>
+                <li>Comprehensive advice on yoga, fitness, nutrition, and medicine to support a balanced, healthy lifestyle.</li>
+                
+                <h4>Personalized Diet Plans</h4>
+                <li>Customized diet recommendations based on your health goals, preferences, and medical needs.</li>
+                
+                <h4>Appointment Booking</h4>
+                <li>Seamless booking system to connect you with trusted healthcare professionals near you.</li>
+                
+                <h4>User-Friendly Interface</h4>
+                <li>Clean, easy-to-navigate platform that helps you quickly access services and resources tailored to your needs.</li>
+                
+                <h4>Regular Health Updates</h4>
+                <li>Stay informed with the latest in healthcare trends, seasonal tips, and medical insights curated by experts.</li>
+                
+                <h4>Holistic Wellness Coverage</h4>
+                <li>Support for your complete well-being with resources across physical, mental, and nutritional health.</li>
+                
+            </ul>
+        </div>
+        <div class="upcoming">
+            <h1>Upcoming Features</h1>
+            <ul>
+                <li>Live Clinic Map Tracking  
+                    Find doctors' clinics in real-time with interactive maps, making it easy to locate and navigate to nearby healthcare providers.</li>
+            
+                <li>Online Prescriptions  
+                    Get professional prescriptions online from top doctors around the world, ensuring timely and trusted medical support from anywhere.</li>
+            
+                <li>AI-Powered Medicine Insights  
+                    Understand your medications better with AI-driven descriptions, including usage instructions, benefits, side effects, and precautions.</li>
+            
+                <li>Mobile App Access  
+                    Stay connected to your health journey anytime, anywhere with our user-friendly mobile app featuring appointments, wellness tips, and health tracking.</li>
+            
+                <li>Virtual Consultations  
+                    Book and attend online consultations with licensed healthcare professionals—right from the comfort of your home.</li>
+            </ul>
+            
+        </div>
+        <h1 style="font-size: 45px;">Meet Our Developer Team</h1>
+        <div class="developers">
+            <div class="aryan">
+                <h4>Aryan Singh</h4><img src="images/aryan.jpeg" class="profile" alt="not load">. Aryan excels in creating dynamic and interactive user interfaces that enhance the overall user experience. With his full-stack development skills, he ensures that the platform runs smoothly from both the client and server sides.</div>
+                <div class="ravish">
+                    <h4>Ravish Kumar</h4><img src="images/ravish.jpeg" class="profile" alt="not load"> A front-end expert with an unparalleled knack for crafting intuitive and responsive designs. Ravish excels in creating dynamic and interactive user interfaces that enhance the overall user experience..</div>
+                    <div class="Krishna1">
+                        <h4>Krishna </h4><img src="images/krishna.jpeg" class="profile" alt="not load"> A front-end expert with an unparalleled knack for crafting intuitive and responsive designs. Aryan excels in creating dynamic and interactive user interfaces that enhance the overall user experience. With his full-stack development skills.</div>
+
+                <div class="samman">
+                <h4>Samman Gond</h4><img src="images/samman.jpeg" class="profile"alt="not load" >
+                Samman Gond is a talented full-stack developer and UI/UX designer at Rank Bridge. With expertise in both design and development, she creates visually appealing, user-friendly interfaces while ensuring smooth back-end functionality.</div>
+                <div class="Krishna2"> <h4>Krishna Thakur</h4><img src="images/krishna1.jpeg" class="profile" alt="not load">
+                    An exceptional developer with expertise in MongoDB and database management. Krishna Kumar Thakur ensures that Rank Bridge has a robust and efficient backend system, making the platform reliable and scalable..</div>
+                    <div class="shravan"><h4>Shravan</h4><img src="images/shravan.jpeg" class="profile" alt="not load">
+                    A passionate and talented front-end developer with an eye for detail and user experience. Shravan specializes in building visually appealing and highly functional interfaces that make the platform seamless and user-friendly. With a strong foundation in full-stack development.</div>
+        </div>
+        <div class="teamcredit"><h1>Team Credentials</h1>All members of the developer team are MCA postgraduates from MNNIT Allahabad, one of India’s premier institutions. With expertise in front-end, back-end, AI integration, and user experience design, the team is committed to building a reliable, intuitive, and secure platform. Their goal is to make healthcare more accessible and personalized through features like live doctor tracking, online prescriptions, AI-powered medicine insights, and seamless appointment booking—bringing HealthHub's vision of smarter, connected healthcare to life.</div>
+   </main>
+    <footer>
+        <div class="footer">
+            <div class="box1">
+                <img src="images/th.jpeg" alt="" class="ftimg1">
+                <p>Plot No.34,35<br>Knowledge Park I,Greater Noida <br>Uttar Pradesh-201310</p>
+            </div>
+            <div class="box2">
+                <h3>STAY IN TOUCH</h3>
+                <br><br>
+                <a href="https://www.instagram.com/health_hub__11/"> <img src="images/instagrame.png" alt="" class="ftimg"></a>
+               <a href="https://www.facebook.com/profile.php?id=61574642203168&sk=about"> <img src="images/facebook.png" alt=""  class="ftimg"></a>
+                <img src="images/youtube.png" alt=""  class="ftimg">
+                <img src="images/twitter.png" alt=""  class="ftimg">
+                <br> <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3leRgHHA2QD5aeEsf6jYTWZHXVcoDDRcIKbir6-MOSHENoA/viewform?usp=sharing" class="fta" title="Your Valuable Feedback is appreciated">Please Share Your Valuable Feedback Here</a>
+            </div>
+            <div class="box3">
+                <p>Contact Us|
+                    Privacy Policy|
+                    Terms & Conditions|
+                    Gifting Policy|
+                    Online payment & refund policy|
+                    Tele-consult|
+                    Contact
+                    <br>
+                    © 2022 Fortis Healthcare. All Rights Reserved.</p>
+            </div>
+        </div>
+</footer>
+</body>
+</html>
