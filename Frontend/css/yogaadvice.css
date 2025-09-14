@@ -1,0 +1,233 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.186);
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.nav {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.navimg {
+    height: 50px;
+    width: auto;
+}
+
+.navlinks {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.navtab {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.appoint {
+    background-color: rgba(105, 194, 219, 0.174);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+.appoint:hover {
+    transform: scale(1.1);
+    background-color: rgba(90, 202, 234, 0.53);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(90, 202, 234, 0.53);
+    color: white;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gender Selection */
+.gender-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gender-card {
+    width: 120px;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.gender-card:hover, .gender-card.active {
+    background: #ffcc00;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Form Elements */
+select, .getbtn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.getbtn {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.getbtn:hover {
+    background: #218838;
+}
+
+/* Yoga Cards */
+.yoga-poses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pose-card {
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.pose-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pose-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(69, 8, 8, 0.699);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.box1, .box2, .box3 {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.ftimg1 {
+    width: 100px;
+}
+
+.ftimg {
+    width: 40px;
+    margin: 5px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.ftimg:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.fta {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        padding: 15px 0;
+    }
+
+    .gender-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pose-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

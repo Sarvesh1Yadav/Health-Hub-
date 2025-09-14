@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.186);
+    /* overflow-x: hidden; */
+}
+.nav{
+    height: 35%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.appoint{
+    background-color: rgba(105, 194, 219, 0.174);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition:transform 0.3s;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+.appoint:hover{
+    transform: scale(1.1);
+    background-color:rgba(90, 202, 234, 0.53) ;
+}
+.navimg{
+   height: 100%;
+   width: 20%;
+}
+.navtab{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.navlinks{
+    display: flex;
+    gap: 20px;
+}
+.search-bar {
+    width: 400px; /* Increase width */
+    height: 40px; /* Adjust height if needed */
+    border: 2px solid #333; /* Darker border */
+    border-radius: 5px; /* Optional rounded corners */
+    padding: 0 10px; /* Add padding inside the search bar */
+    font-size: 16px; /* Adjust text size */
+}
+ .search-bar:focus {
+    border-color: #000;
+    outline: none; 
+} 
+.searchcontainer{
+    display: flex; /* Align search bar and button side by side */
+    align-items: center; /* Center items vertically */
+    gap: 2px;
+}
+.searchbutton{
+    width: 150px;
+    border: solid 2px black;
+    height: 34px;
+    background-color: rgb(82, 138, 202);
+    color: white;
+    transition:transform 0.3s;
+   border-radius: 2px;
+}
+.searchbutton:hover{
+    transform: scale(1.04);
+}
+.navlogo{
+    height: 150px;
+}
+.navlinks{
+    display: flex;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    gap: 20px;
+    padding: 20px;
+    margin: 5px;
+}
+#dropdown {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: azure;
+    cursor: pointer;
+    font-weight: bold;
+}
+#dropdown:hover,
+#dropdown:focus {
+    background-color: rgb(82, 138, 202);
+    color: white;
+}
+.webdetails{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  padding: 8px;
+  cursor: pointer;
+  color: rgb(18, 17, 17);
+  font-style: oblique;
+  transition: background-color 1.5s ease, color 0.3s ease;
+  /* background-image: url(imgs4.jpg); */
+  font-weight: bold;
+}
+
+.ourfocus{
+    font-size: 25px;
+   
+    list-style: disc;
+    margin: 15px;
+    padding: 15px;
+    background-image: url(images/img10.jpg);
+    margin-left: 60px;
+   
+}
+.foc{
+    width: 60%;
+    font-size: 25px;
+    list-style: disc;
+    margin: 18px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    background-color:  #494343a3;
+    transition: background-color 1.5s ease, color 0.3s ease;
+    color: rgb(18, 17, 17);
+}
+
+.upcoming{
+    text-align: center;
+    font-size: 30px;
+    list-style: disc;
+    margin: 18px;
+    padding: 8px;
+    transition: background-color 1.5s ease, color 0.3s ease;
+}
+.upcoming:hover{
+    background-color:  #81639ca3;
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+.developers{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.aryan, .shravan,.ravish,.samman,.Krishna1,.Krishna2{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 12px;
+    padding: 12px;
+    height: 400px;
+    font-size: 20px;
+    width: 17%;
+}
+.aryan:hover, .samman:hover,.ravish:hover,.Krishna1:hover,.Krishna2:hover,.shravan:hover{
+    background-color: black;
+    color: white;;
+}
+.profile{
+    height: 90px;
+    border-radius: 100%;
+}
+.teamcredit{
+font-size: 20px;
+text-align: center;
+}
+.footer{
+    display: flex;
+    box-sizing: border-box;
+    height: 250px;
+    /* width: 100%; */
+    justify-content: space-between;
+    background-color:rgba(69, 8, 8, 0.699);
+    color: white;
+    padding: 30px;
+    margin: 10px;
+}
+.box1{
+    height: 100%;
+    width: 33%;
+}
+.ftimg1{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+.box2{
+    height: 100%;
+    width: 33%;
+}
+.ftimg{
+    height: 20%;
+    width: 10%;
+    transition: transform 0.3s, filter 0.3s;
+}
+.box3{
+    height: 100%;
+    width: 33%;
+}
+.ftimg:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+.fta{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .navlogo {
+        height: 80px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .searchcontainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .developers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aryan, .shweta, .Krishna1, .Krishna2 {
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .navlogo {
+        height: 70px;
+    }
+
+    .navlinks {
+        font-size: 0.9rem;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .searchcontainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .searchbutton {
+        width: 100%;
+    }
+
+    .webdetails {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .ourfocus, .upcoming, .teamcredit {
+        font-size: 1rem;
+    }
+
+    .foc {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .developers {
+        flex-direction: column;
+    }
+
+    .aryan, .shweta, .Krishna1, .Krishna2 {
+        width: 95%;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 8px;
+    }
+
+    .navlogo {
+        height: 60px;
+    }
+
+    .navlinks {
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .search-bar {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .searchbutton {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .webdetails {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .ourfocus, .upcoming, .teamcredit {
+        font-size: 0.9rem;
+    }
+
+    .foc {
+        font-size: 0.9rem;
+        width: 95%;
+    }
+
+    .developers {
+        flex-direction: column;
+    }
+
+    .aryan, .shweta, .Krishna1, .Krishna2 {
+        width: 98%;
+        padding: 10px;
+    }
+
+    .profile {
+        height: 70px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
