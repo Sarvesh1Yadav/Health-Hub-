@@ -1,0 +1,49 @@
+# Node.js dependencies (if using Node.js)
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Logs and environment files
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.class
+*.pyc
+*.pyo
+*.pyd
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache files
+.cache/
+dist/
+build/
+out/
+coverage/
+*.bak
+
+# Uploaded images/files (optional, if not needed in the repo)
+uploads/
+public/uploads/
+
+# Ignore compiled CSS if using preprocessors (optional)
+*.sass-cache/
+*.scss-cache/
+.env
